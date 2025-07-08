@@ -18,7 +18,6 @@ The model is designed for real-world applications such as customer service, feed
      → Upload `.csv` or `.xlsx` files  
      → Filter messages by specific intent and set a confidence threshold  
      → Download filtered results as Excel file
-     ![Gradio File Tool]Upload&Download file.png)
   3. Accuracy of model : 92% , Macro F1 Score: 0.94
 ##  Dataset
 All data used in this project is based on the `test.jsonl` file from the [SetFit/amazon_reviews_multi_en](https://huggingface.co/datasets/SetFit/amazon_reviews_multi_en) dataset.
@@ -30,6 +29,5 @@ All data used in this project is based on the `test.jsonl` file from the [SetFit
 - Base model: [`microsoft/deberta-v3-base`](https://huggingface.co/microsoft/deberta-v3-base)
 - Fine-tuned using Hugging Face `Trainer`
 - Evaluation results on test split (191 samples)
-![Confusion Matrix](ConfusionMatrix.png)
 
   
