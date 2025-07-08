@@ -6,8 +6,8 @@ This project builds an intelligent text classification model to automatically ca
 - **Suggestion**
 - **Thank You**
 
-
-##  Featuresح
+The model is designed for real-world applications such as customer service, feedback analysis, or helpdesk automation — where understanding the intent behind a message is critical for routing and response handling.
+##  Features
 -  **Classifies text messages** into: `Complaint`, `Inquiry`, `Suggestion`, or `Thank You`
 -  Fine-tuned using **manually labeled high-quality data** and scaled with **confidence-based pseudo-labeling**
 -  Built on **DeBERTa-v3**, a powerful transformer model for deep contextual understanding
@@ -18,17 +18,18 @@ This project builds an intelligent text classification model to automatically ca
      → Upload `.csv` or `.xlsx` files  
      → Filter messages by specific intent and set a confidence threshold  
      → Download filtered results as Excel file
+     ![Gradio File Tool]Upload&Download file.png)
+  3. Accuracy of model : 92% , Macro F1 Score: 0.94
 ##  Dataset
-- Source: [SetFit/amazon_reviews_multi_en](https://huggingface.co/datasets/SetFit/amazon_reviews_multi_en)
-- Files used: `train.jsonl`, `test.jsonl`
-- Final dataset includes:
-  - **100 manually labeled messages** (25 per category)
-  - **854 pseudo-labeled messages** (filtered at confidence > 90%)
-  
+All data used in this project is based on the `test.jsonl` file from the [SetFit/amazon_reviews_multi_en](https://huggingface.co/datasets/SetFit/amazon_reviews_multi_en) dataset.
+- A custom set of **100 labeled examples** (25 per class) was created:
+  - Selected from `test.jsonl` and partially written manually.
+- The remaining entries from `test.jsonl` were treated as **unlabeled**, and later pseudo-labeled by the model.
+  - Only predictions with **confidence > 90%** were used for training.
 ## Model Architecture
-
 - Base model: [`microsoft/deberta-v3-base`](https://huggingface.co/microsoft/deberta-v3-base)
 - Fine-tuned using Hugging Face `Trainer`
-- Evaluation results on test split (191 samples):
+- Evaluation results on test split (191 samples)
+![Confusion Matrix](ConfusionMatrix.png)
+
   
-The model is designed for real-world applications such as customer service, feedback analysis, or helpdesk automation — where understanding the intent behind a message is critical for routing and response handling.
