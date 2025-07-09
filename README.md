@@ -19,7 +19,7 @@ The model is designed for real-world applications such as customer service, feed
      → Filter messages by specific intent and set a confidence threshold  
      → Download filtered results as Excel file
 ##  Dataset
-All data used in this project is based on the `test.jsonl` file from the [SetFit/amazon_reviews_multi_en](https://huggingface.co/datasets/SetFit/amazon_reviews_multi_en) dataset.
+All data used in this project is based on the `test.jsonl` file from the public dataset [SetFit/amazon_reviews_multi_en](https://huggingface.co/datasets/SetFit/amazon_reviews_multi_en) .
 - A custom set of **100 labeled examples** (25 per class) was created:
   - Selected from `test.jsonl` and partially written manually.
 - The remaining entries from `test.jsonl` were treated as **unlabeled**, and later pseudo-labeled by the model.
