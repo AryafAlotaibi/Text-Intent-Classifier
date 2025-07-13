@@ -34,9 +34,10 @@ All data used in this project is based on the `test.jsonl` file from the public 
 To run the project:
 1. *Download the trained model folder* from Google Drive: [ Download Trained Model](https://drive.google.com/drive/folders/1J-dxPJ8yjnGekenveRBAJ5WYc_hbgVrT?usp=sharing)
    
-3. *Open the Google Colab notebook*: [ Open Colab Notebook](https://colab.research.google.com/drive/1IQlzX1riyaEd-r1zBm4PkL1gpBA_R5q5?usp=sharing)
-   
-4. *Upload the model folder manually to Colab*, then run the notebook to:
+3. *Open the Google Colab notebook (View only)*: [ Open Colab Notebook](https://colab.research.google.com/drive/1IQlzX1riyaEd-r1zBm4PkL1gpBA_R5q5?usp=sharing)
+4. Copy the notebook to your own Google Colab by clicking:
+   File → Save a copy in Drive 
+6. *Upload the model folder manually into your Colab session*, then run the notebook to:
    - Load the model
    - Test single messages
    - Filter and classify a review file
